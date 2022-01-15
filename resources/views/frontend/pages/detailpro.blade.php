@@ -3,7 +3,7 @@
 
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="{!! asset('resources/upload/sanpham/'.$sanpham->sanpham_anh) !!}" alt="fashion img" style="width: 1920px; height: 300px;">
+   <img src="{!! asset('resources/upload/sanpham/'.$sanpham->sanpham_anh) !!}" alt="fashion img" style="width: 1920px; height: 300px;object-fit: fill;">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
