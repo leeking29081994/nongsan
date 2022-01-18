@@ -34,6 +34,7 @@ class LoaisanphamEditRequest extends Request
         return [
             'txtLSPName.required'   => '<div><strong  style="color: red;">Vui lòng không để trống trường này!</strong></div>',
             'txtLSPParent.required'   => '<div><strong  style="color: red;">Vui lòng chọn dữ liệu!</strong></div>',
+            'fImage.required' => '<div><strong  style="color: red;">Vui lòng không để trống trường này!</strong></div>',
             'mimes' => '<div><strong  style="color: red;">Vui lòng chọn đúng file ảnh</strong></div>',
             'fImage.max' => '<div><strong  style="color: red;">Vui lòng chọn file ảnh có kích thước không quá 2MB</strong></div>'
         ];
