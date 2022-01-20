@@ -303,7 +303,6 @@ INSERT INTO `khachhang` (`id`, `khachhang_ten`, `khachhang_email`, `khachhang_sd
 
 --
 -- Table structure for table `khuyenmai`
---
 
 CREATE TABLE `khuyenmai` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -336,6 +335,7 @@ INSERT INTO `khuyenmai` (`id`, `khuyenmai_tieu_de`, `khuyenmai_url`, `khuyenmai_
 --
 -- Table structure for table `loainguoidung`
 --
+
 
 CREATE TABLE `loainguoidung` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -641,6 +641,7 @@ INSERT INTO `nhom` (`id`, `nhom_ten`, `nhom_url`, `nhom_mo_ta`, `nhom_anh`, `cre
 --
 -- Table structure for table `quangcao`
 --
+
 
 CREATE TABLE `quangcao` (
   `id` int(10) UNSIGNED NOT NULL,
