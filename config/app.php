@@ -158,6 +158,7 @@ return [
         \Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         Fx3costa\Laravelchartjs\Providers\ChartjsServiceProvider::class,
+        Brian2694\Toastr\ToastrServiceProvider::class,
 
     ],
 
@@ -206,6 +207,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Cart' => \Gloudemans\Shoppingcart\Facades\Cart::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
     ],
 
 ];
