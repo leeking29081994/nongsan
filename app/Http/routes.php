@@ -30,7 +30,7 @@ Route::get('/demo', 'HomeController@demo');
 
 Route::get('hien-san-pham/{id}','HomeController@hiensanpham');
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('nhom-thuc-pham/{url}', 'HomeController@group');
 
