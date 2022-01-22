@@ -50,7 +50,7 @@ Route::get('khuyen-mai/{url}', 'HomeController@detailpromotions');
 
 Route::get('mon-ngon/{url}', 'HomeController@detailcook');
 
-Route::get('san-pham/{url}', 'HomeController@product');
+Route::get('san-pham/{url}', 'HomeController@product')->name('sanpham');
 
 Route::get('mua-hang/{id}/{ten}',['as'=>'muahang','uses'=>'HomeController@buyding']);
 

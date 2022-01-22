@@ -305,7 +305,7 @@ class HomeController extends Controller
         $binhluan->sanpham_id = $request->txtID;
         $binhluan->save();
         toastr()->success('Cám ơn bạn đã nhận xét!', 'Thành công!');
-        return redirect()->route('home');
+        return redirect()->route('sanpham');
     }
 
     public function getFind()
