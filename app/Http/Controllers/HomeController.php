@@ -8,8 +8,10 @@ use DB,Cart,Request,Mail;
 use App\Donhang;
 use App\Binhluan;
 use App\Chitietdonhang;
+use App\Sanpham;
 use App\Http\Requests\ThanhtoanRequest;
 use App\Http\Requests\BinhluanRequest;
+use Toastr;
 class HomeController extends Controller
 {
     /**
@@ -303,9 +305,8 @@ class HomeController extends Controller
         $binhluan->binhluan_trang_thai = 0;
         $binhluan->sanpham_id = $request->txtID;
         $binhluan->save();
-         echo "<script>
-          alert('Cảm ơn bạn đã góp ý!');
-          window.location = '".url('/')."';</script>";
+        toastr()->success('Cám ơn bạn đã nhận xét!', 'Thành công!');
+        return redirect()->route('home');
     }
 
     public function getFind()
