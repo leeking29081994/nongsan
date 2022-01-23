@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
-//use Illuminate\Http\Request;
-use DB,Cart,Request,Mail;
+//use App\Http\Requests;
+use Illuminate\Http\Request;
+use DB,Cart,Mail;
 use App\Donhang;
 use App\Binhluan;
 use App\Chitietdonhang;
@@ -111,19 +111,23 @@ class HomeController extends Controller
 
     public function postContact(Request $request)
     {
-        $data = ['mail'=>Request::input('txtMail'),'name'=>Request::input('txtName'),'content'=>Request::input('txtContent')];
-        Mail::send('auth.emails.layoutmail', $data, function ($message) {
-            $message->from('nongsancantho@gmail.com', 'Khách hàng');
+       $messages = [
+            'txtName.required' => 'Xin vui lòng nhập tên',
+            'txtName.max' => 'Tên không được vượt quá 50 ký tự',
+            'txtContent.required' => 'Nội dung content bắt buộc nhập',
+            'txtMail.required' => 'Nội dung mail bắt buộc nhập',
+            'txtMail.email' => 'Địa chỉ email không đúng',
+        ];
         
-            $message->to('nongsancantho@gmail.com', 'Admin');
-        
-            $message->subject('Mail liên hệ!!!');
-        });
+        $this->validate($request,[
+            'txtName'=>'required|max:255',
+            'txtContent'=>'required',
+            'txtMail'=>'required|email',
+        ], $messages);
 
         echo "<script>
-         alert('Cảm ơn bạn đã góp ý! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất');
-         window.location='".url('/')."'
-        </script>";
+          alert('Bạn đã gửi thông tin thành công!');
+          window.location = '".url('/')."';</script>";
     }
 
     public function promotions()

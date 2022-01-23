@@ -36,6 +36,15 @@
              <div class="row">
                <div class="col-md-8">
                  <div class="aa-contact-address-left">
+                   @if (count($errors) > 0)
+                     <div class="error-message" style="color: red;">
+                      <ul>
+                         @foreach ($errors->all() as $error)
+                         <li>{{ $error }}</li>
+                          @endforeach
+                     </ul>
+                 </div>
+                  @endif
                    <form class="comments-form contact-form" action="" method="POST">
                    <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <div class="row">
@@ -46,7 +55,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">                        
-                          <input type="email" name="txtMail" placeholder="Email" class="form-control">
+                          <input type="text" name="txtMail" placeholder="Email" class="form-control">
                         </div>
                       </div>
                     </div>                  
