@@ -47,11 +47,18 @@
             <ul class="nav navbar-top-links navbar-right">
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a href="{!! url('logout') !!}">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-user fa-fw"></i> {!! Auth::user()->name !!} <i class="fa fa-caret-down"></i>
                     </a>
                     
                     <!-- /.dropdown-user -->
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Thông tin tài khoản</a></li>
+                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Chỉnh sửa tài khoản</a></li>
+                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Thêm quyền admin</a></li>
+                         <li role="presentation" class="divider"></li>
+                         <li role="presentation"><a role="menuitem" tabindex="-1" href="{!! url('logout') !!}">Đăng xuất</a></li>
+                    </ul>
                 </li>
                 <!-- /.dropdown -->
             </ul>
