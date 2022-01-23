@@ -31,6 +31,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href="{{ url('public/frontend/magiczoomplus/magiczoomplus.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     <script src="{{ url('public/frontend/magiczoomplus/magiczoomplus.js') }}"></script>
   </head>
   <body> 
@@ -181,5 +182,7 @@
 
   <!-- My scripts -->
   <script src="{{ url('public/frontend/js/myscript.js') }}"></script> 
+  <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+  {!! Toastr::message() !!}
   </body>
 </html>
