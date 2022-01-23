@@ -60,6 +60,9 @@
                 <input type="hidden" name="fImageCurrent" value="{!! $monngon->monngon_anh !!}">
                 <br>
                 <input type="file" name="fImage" >
+                <div>
+                    {!! $errors->first('fImage') !!}
+                </div>
             </div>
         </div>
         </div>
