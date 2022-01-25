@@ -50,18 +50,18 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">                        
-                          <input type="text" name="txtName" placeholder="Your Name" class="form-control">
+                          <input type="text" name="txtName" placeholder="Họ tên" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">                        
-                          <input type="text" name="txtMail" placeholder="Email" class="form-control">
+                          <input type="text" name="txtMail" placeholder="Địa chỉ email" class="form-control">
                         </div>
                       </div>
                     </div>                  
                      
                     <div class="form-group">                        
-                      <textarea class="form-control" name="txtContent" rows="3" placeholder="Message"></textarea>
+                      <textarea class="form-control" name="txtContent" rows="3" placeholder="Nội dung tin nhắn"></textarea>
                     </div>
                     <button class="aa-secondary-btn">Gửi</button>
                   </form>
