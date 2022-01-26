@@ -12,6 +12,7 @@ use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use Auth;
 use DB;
+use Toastr;
 class AuthController extends Controller
 {
     /*
@@ -109,10 +110,11 @@ class AuthController extends Controller
     {
         if (Auth::attempt(['name' => $request->username, 'password' => $request->password, 'loainguoidung_id'=>1])) {
             // Authentication passed...
+            toastr()->success('Bạn đã đăng nhập thành công!', 'Thành công!');
             return redirect()->route('admin.index');
         }
         else {
-            return redirect()->back();
+            return redirect()->back()->withInput()->withErrors('Tài khoản và mật khẩu không chính xác');
         }
         
     }

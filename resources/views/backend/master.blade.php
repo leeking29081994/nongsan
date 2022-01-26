@@ -23,6 +23,7 @@
 
     <!-- DataTables Responsive CSS -->
     <link href="{{ url('public/backend/bower_components/datatables-responsive/css/dataTables.responsive.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
     <script src="{{ url('public/backend/js/ckeditor/ckeditor.js') }}"></script>
 </head>
@@ -176,6 +177,8 @@
     <!-- DataTables JavaScript -->
     <script src="{{ url('public/backend/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ url('public/backend/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    {!! Toastr::message() !!}
     
     <!-- My JavaScript -->
     <script src="{{ url('public/backend/js/myscript.js') }}"></script>
