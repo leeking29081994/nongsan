@@ -25,15 +25,15 @@ class LoginRequest extends Request
     {
         return [
             'username' => 'required',
-            'password' => 'required'
+            'password' => 'required',
         ];
     }
 
     public function messages()
     {
         return[
-            'username.required'   => '<div><strong  style="color: red;">Vui lòng nhập tài khoản!</strong></div>',
-            'password.required'   => '<div><strong  style="color: red;">Vui lòng nhập mật khẩu!</strong></div>'
+            'username.required'   => 'Vui lòng nhập tài khoản!',
+            'password.required'   => 'Vui lòng nhập mật khẩu!',
         ];
     }
 }

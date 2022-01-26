@@ -112,7 +112,7 @@ class AuthController extends Controller
             return redirect()->route('admin.index');
         }
         else {
-            return redirect()->back();
+            return redirect()->back()->withInput()->withErrors('Tài khoản hoặc mật khẩu không đúng');
         }
         
     }
