@@ -33,20 +33,24 @@
                         <h3 class="panel-title">Đăng nhập</h3>
                     </div>
                     <div class="panel-body">
+                        @if (count($errors) > 0)
+    <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                         <form  action="{!! route('admin.login.getLogin') !!}" method="POST">
                         <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" name="username" value="{!! old('username') !!}" placeholder="Username" />
-                                    <div>
-                                        {!! $errors->first('username') !!}
-                                    </div> 
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="password" value="" />
-                                    <div>
-                                        {!! $errors->first('password') !!}
-                                    </div> 
                                 </div>
                                 <button type="submit" class="btn btn-lg btn-success btn-block">Đăng nhập</button>
                             </fieldset>
